@@ -1,16 +1,20 @@
 source 'https://rubygems.org'
 
-group :test do
-  gem 'chefspec', '> 3.3.0'
-  gem 'foodcritic', '> 3.0.0'
-  gem 'strainer'
+gem 'berkshelf'
 
-  gem 'chef', '~> 11.0'
-  gem 'knife-ec2'
-  gem 'knife-spork'
-  gem 'rake'
-  gem 'rubocop'
-  gem 'test-kitchen'
-  gem 'kitchen-vagrant'
-  gem 'vagrant-wrapper'
-end
+# Uncomment these lines if you want to live on the Edge:
+#
+# group :development do
+#   gem "berkshelf", github: "berkshelf/berkshelf"
+#   gem "vagrant", github: "mitchellh/vagrant", tag: "v1.6.3"
+# end
+#
+# group :plugins do
+#   gem "vagrant-berkshelf", github: "berkshelf/vagrant-berkshelf"
+#   gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus"
+# end
+
+gem "test-kitchen"
+gem "kitchen-vagrant"
+gem "vagrant-wrapper"
+

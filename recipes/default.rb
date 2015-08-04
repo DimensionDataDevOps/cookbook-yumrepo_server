@@ -23,6 +23,7 @@ end
 node.default['apache']['listen_ports'] << node['yum']['server']['http_port']
 include_recipe 'apache2'
 include_recipe 'apache2::logrotate' if node['apache']['include_logrotate']
+include_recipe 'apache2::mod_rewrite'
 
 web_app 'yum-server' do
   server_name node['hostname']

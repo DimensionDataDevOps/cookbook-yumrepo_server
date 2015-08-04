@@ -6,7 +6,15 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: centos-6.5
+  - name: ubuntu-14.04
+    driver:
+      box: chef/ubuntu-14.04
+    attribute:
+      apt:
+        compile_time_update: yes
+  - name: centos-6.6
+    driver:
+      box: chef/centos-6.6
 
 suites:
   - name: default
